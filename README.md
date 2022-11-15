@@ -17,6 +17,11 @@ Install all dependenciess
 npm install
 ```
 
+Request a faucet into your chia wallet by pasting your wallet into the official chia faucet 
+faucet.chia.net
+
+Wait till the requested faucet reflects in your wallet
+
 Run the script
 ```bash
 node index.js
