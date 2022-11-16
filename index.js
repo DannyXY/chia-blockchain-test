@@ -13,6 +13,7 @@ const params = {
 
 const nft_wallet_id = 0
 const did_wallet_id = 0
+const didWalletDid = ""
 
 const nftParam = {
   wallet_id: nft_wallet_id,
@@ -58,7 +59,7 @@ create_new_wallet(agent, {
   did_type: "new",
   amount: 1,
   backup_dids: [
-    "did:chia:1plzd3t49kek2clpfmy7eam3hkmqtm8lu66uw8r3v3qgdu5vecnfsmsdmm7",
+    didWalletDid,
   ],
   num_of_backup_ids_needed: 1,
   fee: 10,
