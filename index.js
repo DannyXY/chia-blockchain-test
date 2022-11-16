@@ -59,11 +59,11 @@ create_new_wallet(agent, {
   did_type: "new",
   amount: 1,
   backup_dids: [
-    didWalletDid,
+    
   ],
-  num_of_backup_ids_needed: 1,
+  num_of_backup_ids_needed: 0
   fee: 10,
-}).then((res) => did_wallet_id=res.wallet_id);
+}).then((res) => {did_wallet_id=res.wallet_id, didWalletDid=res.my_did});
 
 // Get all current wallets
 get_wallets(agent, null).then((res) => console.log(res));
