@@ -13,6 +13,8 @@ function hash(string) {
   return createHash('sha256').update(string).digest('hex');
 }
 
+
+
 let did_wallet_id = 0
 // Create a backup did to use here
 create_new_wallet(agent, {
@@ -30,14 +32,14 @@ let bulkNftArray = []
 
 // Map through metadata to create array of metadata for the bulk mint
 metadata.map(async (data, index) => {
-  const url = `https://githubusercontent.mmm.com/${index+1}`
+  const url = `https://github.com/DannyXY/chia-blockchain-test/blob/main/fighter-img/${index+1}.jpg?raw=true`
   const urlHash = hash(url)
   const meta_hash = hash(data)
   bulkNftArray.push({
     uris: [url],
     hash: urlHash,
     meta_uris: [
-      `https:/localhost:3000/metadata/${index+1}`,
+      `https://0xwagmi-nft.vercel.app/api/metadata/${index+1}`,
     ],
     meta_hash: meta_hash,
     license_uris: [
